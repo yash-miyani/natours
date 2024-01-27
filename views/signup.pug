@@ -6,10 +6,10 @@ block content
     main.main
         .login-form
             h2.heading-secondary.ma-bt-lg Sign Up
-            form.form.form--login
+            form.form.form--signup
                 .form__group
                     label.form__label(for='email') Full Name
-                    input#email.form__input(type='text', placeholder='jonas Schmedtmann', required)
+                    input#fullName.form__input(type='text', placeholder='jonas Schmedtmann', required)
                 .form__group.ma-bt-md
                     label.form__label(for='email') Email address
                     input#email.form__input(type='email', placeholder='you@example.com', required)
@@ -18,6 +18,6 @@ block content
                     input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')
                 .form__group.ma-bt-md
                     label.form__label(for='password') Confirm Password 
-                    input#password.form__input(type='password', placeholder='••••••••', required, minlength='8')    
+                    input#confirmPassword.form__input(type='password', placeholder='••••••••', required, minlength='8')    
                 .form__group
                     button.btn.btn--green Signup
