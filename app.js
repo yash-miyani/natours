@@ -9,6 +9,7 @@ const hpp = require('hpp');
 const cookieParser = require('cookie-parser');
 const { expressCspHeader, SELF } = require('express-csp-header');
 const cors = require('cors');
+const compression = require('compression');
 
 const AppError = require('./utils/appError.js');
 const globalErrorHandler = require('./controllers/errorController.js');
@@ -78,6 +79,8 @@ app.use(
     ], // duplicate allow
   }),
 );
+
+app.use(compression());
 
 //test middleaare
 app.use((req, res, next) => {
